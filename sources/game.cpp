@@ -49,8 +49,6 @@ void Game::playAll()
         cout << "Playing turn number:" << i << endl;
         playTurn();
         printLastTurn();
-        cout<<"THIS PERSON: "<< p1.getName()<<" HAS:" << p1.cardesTaken()<<endl; 
-        cout<<"THIS PERSON: "<< p2.getName()<<" HAS:" << p2.cardesTaken()<<endl; 
     }
     inGame = 0;
     gameOver = 1;
@@ -176,7 +174,6 @@ void Game::playTurn()
 
 void Game::Draw(int round)
 {
-    cout << "~~~~~~~~~~~~~~Draw number:" << round << " in a row~~~~~~~~~~~~~~" << endl;
     if (p1.stacksize() == 0 || p2.stacksize() == 0)
     {
         inGame = 0;
